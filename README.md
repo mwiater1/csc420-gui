@@ -1,6 +1,6 @@
 # World Flags
 
-This application shows all of the flags of the world. This was written as Homework #3 for CSC420 at SUNY Oswego.
+This application shows all of the flags of the world and is based on the [eu-flags](https://github.com/mwiater1/eu-flags) project. This was written as Homework #3 for CSC420 at SUNY Oswego.
 
 ## Getting Started
 
