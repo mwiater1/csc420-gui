@@ -24,14 +24,24 @@ import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.ExecutionException;
 
+/**
+ * The loading splash window.
+ */
 public class SplashWindow extends JWindow {
     private static final Dimension SIZE = new Dimension(300,300);
 
-
+    /**
+     * Entry point of the program.
+     *
+     * @param args command line arguments.
+     */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new SplashWindow().setVisible(true));
     }
 
+    /**
+     * The constructor.
+     */
     private SplashWindow() {
         // Set window parameters
         setSize(SIZE);
@@ -55,11 +65,21 @@ public class SplashWindow extends JWindow {
         flagLoader.execute();
     }
 
+    /**
+     * The swing worker for loading the flags.
+     */
     private class FlagLoader extends SwingWorker<Pair<Dimension, List<Flag>>, String> {
         private final List<Flag> flags;
         private final JLabel countryLabel;
         private final SplashWindow splash;
 
+        /**
+         * The constructor.
+         *
+         * @param splash the splash window.
+         * @param progressBar the progress bar on the splash window.
+         * @param countryLabel the label below the progress bar.
+         */
         FlagLoader(final SplashWindow splash, final JProgressBar progressBar, final JLabel countryLabel) {
             this.splash = splash;
             this.flags = new ArrayList<>();
