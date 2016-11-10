@@ -1,6 +1,8 @@
 package com.mateuszwiater.csc420.worldflagsalternative;
 
 
+import net.miginfocom.swing.MigLayout;
+
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
@@ -12,17 +14,20 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
-public class FlagTextField extends JTextField {
+public class FlagTextPanel extends JPanel {
     private final List<Flag> flags;
     private final FlagPanel flagPanel;
+    private final JTextField textField;
 
-    public FlagTextField(final FlagPanel flagPanel, final List<Flag> flags) {
+    public FlagTextPanel(final FlagPanel flagPanel, final List<Flag> flags) {
         this.flags = flags;
         this.flagPanel = flagPanel;
-//        this.setDropMode(DropMode);
-        this.setTransferHandler(new FlagTransferHandler());
-        System.out.println(this.getDropMode());
-        this.getDocument().addDocumentListener(new ChangeListener());
+        this.textField = new JTextField();
+        textField.setTransferHandler(new FlagTransferHandler());
+        textField.getDocument().addDocumentListener(new ChangeListener());
+        setLayout(new MigLayout("","[grow,fill]","[grow,fill]"));
+        setBorder(BorderFactory.createTitledBorder("Current Country"));
+        add(textField);
     }
 
     private class ChangeListener implements DocumentListener {
@@ -43,11 +48,11 @@ public class FlagTextField extends JTextField {
         }
 
         private void onChange() {
-            final Optional<Flag> flag = flags.stream().filter(f -> f.toString().equalsIgnoreCase(getText())).findFirst();
+            final Optional<Flag> flag = flags.stream().filter(f -> f.toString().equalsIgnoreCase(textField.getText())).findFirst();
             if(flag.isPresent()) {
                 flagPanel.setFlag(flag.get().getCountryFlag());
             } else {
-                flagPanel.setText("\"" + getText() + "\" is not a valid country.");
+                flagPanel.setText("\"" + textField.getText() + "\" is not a valid country.");
             }
         }
     }
@@ -60,7 +65,7 @@ public class FlagTextField extends JTextField {
             }
 
             try {
-                setText((String) support.getTransferable().getTransferData(DataFlavor.stringFlavor));
+                textField.setText((String) support.getTransferable().getTransferData(DataFlavor.stringFlavor));
                 return true;
             } catch (UnsupportedFlavorException | IOException e) {
                 e.printStackTrace();
@@ -69,7 +74,7 @@ public class FlagTextField extends JTextField {
         }
 
         @Override
-        public boolean (TransferSupport support) {
+        public boolean canImport(TransferSupport support) {
             return support.isDataFlavorSupported(DataFlavor.stringFlavor);
         }
     }

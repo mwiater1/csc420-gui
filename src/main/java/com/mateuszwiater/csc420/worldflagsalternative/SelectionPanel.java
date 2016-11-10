@@ -9,11 +9,11 @@ public class SelectionPanel extends JPanel {
 
     SelectionPanel(final FlagPanel flagPanel, final List<Flag> flags) {
         // Set panel parameters
-        setLayout(new MigLayout("","[grow,fill]","[][grow,fill][]"));
+        setLayout(new MigLayout("","[grow,fill]","[grow,fill][]"));
 
         // Add the components to the panel.
-        add(new JLabel("World Countries", SwingConstants.CENTER),"wrap");
-        add(new CountryList(flags),"wrap");
-        add(new FlagTextField(flagPanel, flags));
+//        add(new JLabel("World Countries", SwingConstants.CENTER),"wrap");
+        add(new CountryListPane(flags),"wrap");
+        add(new FlagTextPanel(flagPanel, flags));
     }
 }

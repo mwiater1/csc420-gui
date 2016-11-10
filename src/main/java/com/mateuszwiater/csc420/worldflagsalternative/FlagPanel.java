@@ -2,10 +2,7 @@ package com.mateuszwiater.csc420.worldflagsalternative;
 
 import net.miginfocom.swing.MigLayout;
 
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
+import javax.swing.*;
 import java.awt.Color;
 import java.awt.Dimension;
 
@@ -26,6 +23,7 @@ public class FlagPanel extends JPanel {
     void setFlag(final ImageIcon flag) {
         this.flag.setText("");
         this.flag.setIcon(flag);
+        SwingUtilities.getWindowAncestor(this).setIconImage(flag.getImage());
     }
 
     void setText(final String string) {
