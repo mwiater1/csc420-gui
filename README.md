@@ -1,6 +1,6 @@
-# World Flags
+# Flag Canvas
 
-This application shows all of the flags of the world and is based on the [eu-flags](https://github.com/mwiater1/eu-flags) project. This was written as Homework #3 for CSC420 at SUNY Oswego.
+This application shows all of the flags of the world and is based on the [world-flags-alternative](https://github.com/mwiater1/world-flags-alternative) and [circle-canvas](https://github.com/mwiater1/circle-canvas) projects. This was written as Homework #3 for CSC420 at SUNY Oswego.
 
 ## Getting Started
 
