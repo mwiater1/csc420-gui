@@ -1,4 +1,4 @@
-rootProject.name = 'eu-flags'
+rootProject.name = 'csc420-gui'
 include 'hw1'
 include 'hw2'
 include 'hw3'
