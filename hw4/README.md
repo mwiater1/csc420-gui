@@ -26,7 +26,3 @@ To create a runnable .jar of the application:
 * [Flag Pedia](http://flagpedia.net/) - Source of all of the flag images.
 * [Commons IO](http://commons.apache.org/proper/commons-io/) - Used to load the flags.
 * [Mig Layout](http://www.miglayout.com/) - The layout manager used.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.

@@ -24,7 +24,3 @@ To create a runnable .jar of the application:
 
 ## Built With
 * [Flag Pedia](http://flagpedia.net/) - Source of all of the flag images.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
