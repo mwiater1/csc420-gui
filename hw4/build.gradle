@@ -1,25 +1,11 @@
 group 'com.mateuszwiater.csc420.worldflagsalternative'
 version '1.0-SNAPSHOT'
 
-apply plugin: 'java'
-apply plugin: 'application'
-
-sourceCompatibility = 1.8
-
 run {
     mainClassName = 'com.mateuszwiater.csc420.worldflagsalternative.SplashWindow'
-}
-
-repositories {
-    mavenCentral()
 }
 
 dependencies {
     compile 'commons-io:commons-io:2.5'
     compile 'com.miglayout:miglayout-swing:5.0'
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '3.1'
-    distributionUrl = "https://services.gradle.org/distributions/gradle-${gradleVersion}-all.zip"
 }

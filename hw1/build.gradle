@@ -1,13 +1,12 @@
-group 'com.mateuszwiater.csc420.worldflags'
+group 'com.mateuszwiater.csc420.euflags'
 version '1.0-SNAPSHOT'
 
 run {
-    mainClassName = 'com.mateuszwiater.csc420.worldflags.SplashWindow'
+    mainClassName = 'com.mateuszwiater.csc420.euflags.Main'
 }
 
 dependencies {
     compile 'commons-io:commons-io:2.5'
     compile 'org.slf4j:slf4j-api:1.7.21'
     compile 'org.slf4j:slf4j-simple:1.7.21'
-    compile 'com.miglayout:miglayout-swing:5.0'
 }

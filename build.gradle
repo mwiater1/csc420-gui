@@ -1,26 +1,20 @@
-group 'com.mateuszwiater.csc420.euflags'
+group 'com.mateuszwiater.csc420'
 version '1.0-SNAPSHOT'
 
-apply plugin: 'java'
-apply plugin: 'application'
-
-sourceCompatibility = 1.8
-
-run {
-    mainClassName = 'com.mateuszwiater.csc420.euflags.Main'
+allprojects {
+    repositories {
+        mavenCentral()
+    }
 }
 
-repositories {
-    mavenCentral()
-}
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'application'
 
-dependencies {
-    compile 'commons-io:commons-io:2.5'
-    compile 'org.slf4j:slf4j-api:1.7.21'
-    compile 'org.slf4j:slf4j-simple:1.7.21'
+    sourceCompatibility = 1.8
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '3.0'
+    gradleVersion = '4.2.1'
     distributionUrl = "https://services.gradle.org/distributions/gradle-${gradleVersion}-all.zip"
 }
