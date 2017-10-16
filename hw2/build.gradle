@@ -4,17 +4,3 @@ version '1.0-SNAPSHOT'
 run {
     mainClassName = 'com.mateuszwiater.csc420.circlecanvas.Main'
 }
-
-task fatJar(type: Jar) {
-    baseName = project.name + '-FAT'
-
-    manifest {
-        attributes 'Main-Class' : mainClassName
-    }
-
-    from {
-        configurations.compile.collect {
-            it.isDirectory() ? it : zipTree(it)
-        }
-    } with jar
-}
