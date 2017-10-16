@@ -1,29 +1,19 @@
-# European Flags
+# CSC420 Graphical User Interfaces
 
-This application shows all of the flags in Europe. This was written as Homework #1 for CSC420 at SUNY Oswego.
-
-## Getting Started
-
-There are no outside dependencies required for this application. All commands should be ran from the root project directory. All compiled code and distributions are placed in the **build** folder. 
+This project contains all of the code for the entire class. Every homework is located within its own module and the general theme is flags.
 
 ## Running
 
-To run the program:
+The following is the general layout of the run command for the homeworks.
 
 ```
-./gradlew run
+./gradlew :<moduleName>:run
 ```
 
-## Distribution
-
-To create a runnable .jar of the application:
-
+Example:
 ```
-./gradlew fatJar
+./gradlew :hw1:run
 ```
-
-## Built With
-* [Flag Pedia](http://flagpedia.net/) - Source of all of the flag images.
 
 ## License
 

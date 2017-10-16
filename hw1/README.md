@@ -11,16 +11,11 @@ There are no outside dependencies required for this application. All commands sh
 To run the program:
 
 ```
-./gradlew run
-```
-
-## Distribution
-
-To create a runnable .jar of the application:
-
-```
-./gradlew fatJar
+./gradlew :hw1:run
 ```
 
 ## Built With
 * [Flag Pedia](http://flagpedia.net/) - Source of all of the flag images.
+* [Simple Logging Facade for Java](https://www.slf4j.org/) - Logging framework.
+* [Commons IO](http://commons.apache.org/proper/commons-io/) - Used to load the flags.
+

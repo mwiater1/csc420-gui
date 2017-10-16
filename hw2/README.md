@@ -11,13 +11,5 @@ There are no outside dependencies required for this application. All commands sh
 To run the program:
 
 ```
-./gradlew run
-```
-
-## Distribution
-
-To create a runnable .jar of the application:
-
-```
-./gradlew fatJar
+./gradlew :hw2:run
 ```

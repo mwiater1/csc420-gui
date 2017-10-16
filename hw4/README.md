@@ -1,6 +1,6 @@
-# World Flags
+# World Flags Alternative
 
-This application shows all of the flags of the world and is based on the [eu-flags](https://github.com/mwiater1/eu-flags) project. This was written as Homework #3 for CSC420 at SUNY Oswego.
+This application shows all of the flags of the world and is based on the [Homework #3](../hw3). This was written as Homework #4 for CSC420 at SUNY Oswego.
 
 ## Getting Started
 
@@ -11,15 +11,7 @@ All commands should be ran from the root project directory. All compiled code an
 To run the program:
 
 ```
-./gradlew run
-```
-
-## Distribution
-
-To create a runnable .jar of the application:
-
-```
-./gradlew fatJar
+./gradlew :hw4:run
 ```
 
 ## Built With
